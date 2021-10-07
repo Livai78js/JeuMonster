@@ -1,4 +1,4 @@
-x<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,7 @@ x<!DOCTYPE html>
         {{ encore_entry_script_tags('app') }}
     {% endblock %}
 </head>
-<body>
+<body {% block data_body %}{% endblock %}>
 <header>
     <!-- Fixed navbar -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">

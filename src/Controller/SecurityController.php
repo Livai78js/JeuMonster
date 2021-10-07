@@ -8,9 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class SecurityController extends AbstractController
 {
-    /**
-     * @Route("/deconnexion", name= "deconnexion")
-     */
+    #[Route('/deconnexion', name: 'deconnexion')]
     public function index(): Response
     {
     }

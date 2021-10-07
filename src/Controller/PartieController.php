@@ -5,16 +5,17 @@ namespace App\Controller;
 use App\Entity\Carte;
 use App\Entity\Partie;
 use App\Repository\CarteRepository;
+use App\Repository\PartieRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class  PartieController extends AbstractController
+class PartieController extends AbstractController
 {
     /**
-     * @Route("/nouvelle-partie", name= "nouvelle_partie")
-     */
+     * @Route("/nouvelle-partie", name="nouvelle_partie")
+     * */
     public function nouvellePartie(
         EntityManagerInterface $entityManager,
         CarteRepository $carteRepository
@@ -61,6 +62,34 @@ class  PartieController extends AbstractController
         $entityManager->flush();
 
 
+        return $this->redirectToRoute('afficher_partie', [
+            'partie' => $partie->getId()
+        ]);
+    }
+
+    #[Route('/parties-en-cours', name: 'partie_en_cours')]
+    public function partiesEnCours(PartieRepository $partieRepository): Response
+    {
+        return $this->render('partie/partie_en_cours.html.twig',
+            [
+        'parties'  =>   $partieRepository->findAll()
+        ]);
+    }
+
+    #[Route('/partie/{partie}', name: 'afficher_partie')]
+    public function afficherPartie(Partie $partie): Response
+    {
+
+
+        return $this->render('partie/afficher_partie.html.twig',
+            [
+                'partie' => $partie,
+            ]);
+    }
+
+    #[Route('/refresh-partie/{partie}', name: 'refresh_partie')]
+    public function refreshPlateau(CarteRepository $carteRepository, Partie $partie): Response
+    {
         //récupération de toutes les cartes
         $cartes = $carteRepository->findAll();
         $tCartes = [];
@@ -68,20 +97,11 @@ class  PartieController extends AbstractController
             $tCartes[$carte->getId()] = $carte;
         }
 
-        return $this->render('partie/index.html.twig', [
-            'partie' => $partie,
-            'cartes' => $tCartes,
-            'terrains' => Carte::TERRAINS
-        ]);
-    }
-
-    /**
-     * @Route("/partie-en-cours", name= "partie_en_cours")
-     */
-    public function partiesEnCours(): Response
-    {
-        return $this->render('partie/index.html.twig', [
-            'controller_name' => 'PartieController',
-        ]);
+        return $this->render('partie/_plateau_partie.html.twig',
+            [
+                'partie' => $partie,
+                'cartes' => $tCartes,
+                'terrains' => Carte::TERRAINS
+            ]);
     }
 }
