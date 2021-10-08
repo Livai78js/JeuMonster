@@ -67,7 +67,9 @@ class PartieController extends AbstractController
         ]);
     }
 
-    #[Route('/parties-en-cours', name: 'partie_en_cours')]
+    /**
+     * @Route("/partie-en-cours", name="partie_en_cours")
+     * */
     public function partiesEnCours(PartieRepository $partieRepository): Response
     {
         return $this->render('partie/partie_en_cours.html.twig',
@@ -76,7 +78,10 @@ class PartieController extends AbstractController
         ]);
     }
 
-    #[Route('/partie/{partie}', name: 'afficher_partie')]
+
+    /**
+     * @Route("/partie/{partie}", name="afficher_partie")
+     * */
     public function afficherPartie(Partie $partie): Response
     {
 
@@ -87,7 +92,9 @@ class PartieController extends AbstractController
             ]);
     }
 
-    #[Route('/refresh-partie/{partie}', name: 'refresh_partie')]
+    /**
+     * @Route("/refresh-partie/{partie}", name="refresh_partie")
+     * */
     public function refreshPlateau(CarteRepository $carteRepository, Partie $partie): Response
     {
         //récupération de toutes les cartes
