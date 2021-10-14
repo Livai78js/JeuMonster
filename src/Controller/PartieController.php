@@ -31,6 +31,8 @@ class PartieController extends AbstractController
         foreach ($cartesJ1 as $carte) {
             $tempTerrainJ1[] = $carte->getId();
         }
+
+        dump($leaderJ1);
         shuffle($tempTerrainJ1);
         $terrainJ1[0] = [$leaderJ1->getId(), $tempTerrainJ1[1], $tempTerrainJ1[2], $tempTerrainJ1[3]];
         $terrainJ1[1] = [$tempTerrainJ1[4], $tempTerrainJ1[5], $tempTerrainJ1[6]];
@@ -39,6 +41,7 @@ class PartieController extends AbstractController
         for($i=4; $i < 10; $i++) {
             $terrainJ1[$i] = [];
         }
+
 
         $tempTerrainJ2 = [];
         foreach ($cartesJ2 as $carte) {
