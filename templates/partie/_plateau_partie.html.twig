@@ -1,14 +1,20 @@
 Refresh
+<div class="game">
 
-<div class="row">
+<div class="row joueur1">
     <div class="col-2">
         Joueur 1
     </div>
-    {% for i in 0..9 %}
-        <div class="col-1">
+    {% for i in 9..0 %}
+
+        <div class="col-1 colonne">
+
             {% for j in partie.terrainJ1[i] %}
-                Id de la carte {{ j }}
-                Image : {{ cartes[j].image }}
+                <div class="carte">
+              {#   {{ cartes[j].id }} #}
+
+                <img src="{{ asset('assets/img/' ~ cartes[j].image) }}" alt="" >
+                </div>
             {% endfor %}
         </div>
     {% endfor %}
@@ -20,21 +26,25 @@ Refresh
     </div>
     {% for i in 0..9 %}
         <div class="col-1">
-            {{ terrains[i] }}
+          {# {{ terrains[i] }} #}
+           <img src="{{ asset('assets/img/' ~ terrains[i]) }}" alt="" >
         </div>
     {% endfor %}
 </div>
 
-<div class="row">
+<div class="row joueur2">
     <div class="col-2">
         Joueur 2
     </div>
-    {% for i in 9..0 %}
-        <div class="col-1">
+    {% for i in 0..9 %}
+        <div class="col-1 colonne">
             {% for j in partie.terrainJ2[i] %}
-                Id de la carte {{ j }}
-                Image : {{ cartes[j].image }}
+            <div class="carte">
+                {#  {{ cartes[j].id }} #}
+                 <img src="{{ asset('assets/img/' ~ cartes[j].image) }}" alt="">
+            </div>
             {% endfor %}
         </div>
     {% endfor %}
+</div>
 </div>

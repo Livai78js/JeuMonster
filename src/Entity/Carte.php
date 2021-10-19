@@ -18,7 +18,7 @@ class Carte
         'terrain4.png',
         'terrain5.png',
         'terrain6.png',
-        'terrain7png',
+        'terrain7.png',
         'terrain8.png',
         'terrain9.png',
         'terrain10.png',
@@ -27,7 +27,7 @@ class Carte
 
     public const CAMP_J1 = 'j1';
     public const CAMP_J2 = 'j2';
-    public const CAMP_LEADER_J1 = 'lj2';
+    public const CAMP_LEADER_J1 = 'lj1';
     public const CAMP_LEADER_J2 = 'lj2';
 
     public const PIERRE = 'pierre';

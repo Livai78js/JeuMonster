@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -18,12 +21,18 @@
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/PartieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PartieController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ProfilController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProfilController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Carte.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Carte.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partie/_plateau_partie.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partie/_plateau_partie.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partie/afficher_partie.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partie/afficher_partie.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profil/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profil/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/register.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,6 +136,11 @@
       <path value="$PROJECT_DIR$/vendor/symfony/validator" />
       <path value="$PROJECT_DIR$/vendor/symfony/form" />
       <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/vendor/easycorp/easyadmin-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/intl" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-uuid" />
+      <path value="$PROJECT_DIR$/vendor/symfony/uid" />
     </include_path>
   </component>
   <component name="ProjectId" id="1yRTSrG98Z6wWKmkli394nDVBpn" />
@@ -137,11 +151,17 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -165,7 +185,10 @@
       <workItem from="1633938724690" duration="2553000" />
       <workItem from="1634019545712" duration="167000" />
       <workItem from="1634032096070" duration="754000" />
-      <workItem from="1634129431786" duration="5528000" />
+      <workItem from="1634129431786" duration="7312000" />
+      <workItem from="1634228354274" duration="11148000" />
+      <workItem from="1634340456993" duration="11054000" />
+      <workItem from="1634623722862" duration="6270000" />
     </task>
     <servers />
   </component>
@@ -189,6 +212,14 @@
       <screen x="0" y="25" width="1792" height="1022" />
     </state>
     <state x="360" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1792.1022@0.25.1792.1022" timestamp="1634019701128" />
+    <state x="601" y="366" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1634227718156">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="601" y="366" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1792.1120@0.0.1792.1120" timestamp="1634227718156" />
+    <state x="643" y="408" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1634227702656">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="643" y="408" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1792.1120@0.0.1792.1120" timestamp="1634227702656" />
     <state x="405" y="172" key="SettingsEditor" timestamp="1633421919012">
       <screen x="0" y="25" width="1792" height="1022" />
     </state>
@@ -197,14 +228,27 @@
       <screen x="0" y="25" width="1792" height="1022" />
     </state>
     <state x="496" y="273" key="Vcs.Push.Dialog.v2/0.25.1792.1022@0.25.1792.1022" timestamp="1633421933894" />
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1634630025567">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1634630025567" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/src/Controller/ProfilController.php</url>
-          <line>14</line>
+          <line>16</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Controller/Admin/DashboardController.php</url>
+          <line>4</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Entity/Carte.php</url>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

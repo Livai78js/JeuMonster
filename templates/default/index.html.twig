@@ -4,5 +4,30 @@
 
 {% block body %}
 {{ parent() }}
-<h1>Bonjour</h1>
+    <div id="video">
+        Video soon.
+    </div>
+    <div class="partie">
+        <div>
+            <h2>Monsters Battle en ligne !</h2>
+            <p>
+                Bienvenue sur la version en ligne du jeu Monsters Battle !
+                <br>Venez tester ici vos techniques de jeu pour vous améliorer et pulvériser votre famille lors de la prochaine soirée jeux de société !
+            </p>
+        </div>
+        <img src="{{  asset('assets/img/ordi.png')}}" alt="Ordinateur">
+    </div>
+    <div id="banniere">
+        <img src="{{  asset('assets/img/banniere.png')}}" alt="Bannière">
+    </div>
+    <div class="partie">
+        <img src="{{  asset('assets/img/podium.png')}}" alt="Podium">
+        <div>
+            <h2>Progressez au classement !</h2>
+            <p>
+                Cumulez des points à chaque victoire pour connaître votre niveau face au monde !
+                Mais attention, chaque défaite vous fait également perdre des points de classement ! Ça serait beaucoup trop facile sinon !
+            </p>
+        </div>
+    </div>
 {% endblock %}
